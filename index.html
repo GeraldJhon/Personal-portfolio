@@ -6,11 +6,11 @@
     <meta name="description" content="Gerald Jhon Necesario - Front End Developer and UI/UX Designer from Mandaue City, Cebu. Explore my portfolio, projects, and professional experience."/>
     <meta name="keywords" content="Front End Developer, UI/UX Designer, Web Developer, Portfolio, Gerald Necesario, Cebu"/>
     <meta name="author" content="Gerald Jhon G. Necesario" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Gerald Jhon G. Necesario - Portfolio</title>
      
-    <script type="application/ld+json">
+     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -26,9 +26,10 @@
   </head>
 
   <body>
+
      <div class="time-clock">
       <p>
-        <time datetime="">Loading...</time>
+        <time id="currentTime">Loading...</time>
       </p>
     </div>  
     <header>
@@ -49,7 +50,7 @@
       
       <section class="profile" aria-label="profile-heading">
         <h1>Necesario, Gerald Jhon G.</h1>
-          <p> <img src="/assets/Icons/location.svg">Mandaue City, Cebu</p>
+          <p> <img src="/assets/Icons/location.svg" alt="Location Icon">Mandaue City, Cebu</p>
         <div class="profile-info">
           <h2>
             <span style="--i:0">Front End Developer</span>
@@ -63,24 +64,25 @@
 
         <div class="btn-profile">
           <a href="/assets/CV/My-Resume.pdf" class="CV-download" target="_blank" rel="noopener noreferrer">Download CV</a>
-          <a href="mailto:gerald.necesario6@gmail.com" class="email-btn">Email me here</a
-          >
+          <a href="mailto:gerald.necesario6@gmail.com" class="email-btn">Email me here</a>
+
+         
         </div>
       </section>
     </header>
 
     <main>
       <section class="about-me" aria-labelledby="about-heading">
-        <h2>About Me</h2>
+        <h2 id="about-heading">About Me</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod qui
-          officia totam aliquam itaque! Asperiores dolore adipisci dolorem
-          recusandae quo inventore qui nulla! Incidunt expedita facilis quae,
-          repellat vel officiis!
+        I am a passionate Front End Developer and UI/UX Designer based in Mandaue City, Cebu. 
+        With expertise in programming, graphic design, and technical support, I create engaging 
+        and user-friendly web experiences. I'm constantly learning and adapting to new technologies 
+        to deliver innovative solutions.
         </p>
       </section>
       <section class="education" aria-labelledby="education-heading">
-        <h2>Education</h2>
+        <h2 id="education-heading">Education</h2>
         <div class="education-item">
           <h3>Center for Industrial Technology and Enterprise</h3>
           <p class="location">San Jose, Cebu City</p>
@@ -92,63 +94,94 @@
         </div>
       </section>
       <section class="project" aria-labelledby="project-heading">
-        <h2>Projects</h2>
+        <h2 id="project-heading">Projects</h2>
         <!-- Add your projects here -->
       </section>
 
       <section class="tech-stack" aria-labelledby="tech-stack-heading">
-        <h2>Tech stack</h2>
+        <h2 id="tech-stack-heading">Tech stack</h2>
       </section>
 
       <section class="other-skill" aria-labelledby="other-skill-heading">
-        <h2>Skills</h2>
+        <h2 id="other-skill-heading">Skills</h2>
       </section>
 
       <section class="experience" aria-labelledby="experience-heading">
-        <h2>Experience</h2>
+        <h2 id="experience-heading">Experience</h2>
         <!-- Add your skills here -->
       </section>
 
       <section class="certification" aria-labelledby="certification-heading">
-        <h2>Certifications</h2>
+        <h2 id="certification-heading">Certifications</h2>
       </section>
 
       <section class="list" aria-labelledby="list-heading-content">
-        
-   
+        <h2 id="list-heading-content" class="visually-hidden">Additional Information</h2>
           <div class="goals">
-          <h3>Goals</h3>
-
+          <p>Goals</p>
+          <p>Find a career that you love.</p>
           </div>
 
           <div class="organization">
-            <h2>A Member of:</h2>
+            <p>A Member of:</p>
             <div class="organization-container">
-              <p></p>
-              <p></p>
-              <p></p>
+              <ul>
+                <li>CITE Photography</li>
+                <li>CITE Student Police</li>
+                <li>CITE Color Guards</li>
+              </ul>
             </div>
 
           </div>
           <div class="social-container">
             <h2>Social Links</h2>
             <div class="social-links">
-              <a href="https://www.facebook.com/Gerald.necesario6" title="Visit Facebook profile" target="_blank "><i class='bx bxl-facebook' ></i> Gerald Jhon.</a>
-              <a href="https://www.instagram.com/gerald_jhon01/" title="Visit instagram profile" target="_blank"><i class='bx bxl-instagram'></i>Gerald_jhon01</a>
-              <a href="mailto:gerald.necesario6@gmail.com" title="Visit Email " target="_blank"><i class='bx bxl-gmail' >gerald.necesario6@gmail.com</i></a>
-              <a href="https://github.com/GeraldJhon" title="Visit Github profile" target="_blank"><i class='bx bxl-github' ></i></a>
+              <a href="https://www.facebook.com/Gerald.necesario6" title="Visit Facebook profile" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-facebook'></i>Gerald Jhon.
+              </a>
+              <a href="https://www.instagram.com/gerald_jhon01/" title="Visit instagram profile" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-instagram'></i>Gerald_jhon01
+              </a>
+              <a href="https://github.com/GeraldJhon" title="Visit Github profile" target="_blank"  rel="noopener noreferrer">
+                <i class='bx bxl-github'></i>GeraldJhon
+              </a>
             </div>
           </div>
         
         <div class="contact">
-          <a href="mailto:gerald.necesario6@gmail.com" class="email-btn">Email me here</a>
-          <a href=""></a>
-          <a href=""></a>
+          <a href="mailto:gerald.necesario6@gmail.com" title="Visit Email " target="_blank"><i class='bx bxl-gmail'></i> gerald.necesario6@gmail.com</a>
+          <a href="tel:+639812550910">+639 812 550 910</a>
+
 
         </div>
       </section>
 
-      <section class="list-of-image" aria-labelledby="image-heading"></section>
+      <section class="training-picture" aria-labelledby="image-heading">
+        <h2 id="image-heading">Gallery</h2>
+        <div class="training-picture-container">
+          <ul class="picture-list">
+            <li><a href="#" class="gallery-item" data-index="0"><img src="/assets/alliance training/picture 1.jpg" alt="First meet training conduct" loading="lazy"></a></li>
+            <li><a href="#" class="gallery-item" data-index="1"><img src="/assets/alliance training/picture 2.jpg" alt="Certification Award" loading="lazy"></a></li>
+            <li><a href="#" class="gallery-item" data-index="2"><img src="/assets/alliance training/picture 3.jpg" alt="Defend our Ticketing System" loading="lazy"></a></li>
+            <li><a href="#" class="gallery-item" data-index="3"><img src="/assets/alliance training/picture 4.jpg" alt="Picture with all student & Alliance" loading="lazy"></a></li>
+            <li><a href="#" class="gallery-item" data-index="4"><img src="/assets/alliance training/picture 5.jpg" alt="Picture of ours" loading="lazy"></a></li>
+          </ul>
+        </div>
+
+        <!-- Lightbox -->
+          <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+              <button class="close-btn" id="closeBtn">&times;</button>
+              <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+              <img src="" alt="" id="lightboxImg">
+              <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+              <div class="lightbox-controls">
+                <span class="lightbox-counter" id="counter">1 / 5</span>
+                <button class="lightbox-btn" id="backBtn">Back to Gallery</button>
+              </div>
+            </div>
+          </div>
+      </section>
     </main>
 
     <hr/>
@@ -157,6 +190,7 @@
     </footer>
     
     <script src="/darkmode-function.js"></script>
-    <script src="/script.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/gallery.js"></script>
   </body>
 </html>
