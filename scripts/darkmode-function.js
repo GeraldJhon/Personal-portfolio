@@ -1,25 +1,27 @@
-const toggle = document.getElementById('toggle');
+// Dark Mode Toggle
+const darkToggle = document.getElementById('darkToggle');
 const body = document.body;
+const icon = darkToggle.querySelector('i');
 
-// Check for saved theme preference
-const currentTheme = localStorage.getItem('theme') || 'light-mode';
-body.classList.add(currentTheme);
-
-if (currentTheme === 'dark-mode') {
-    toggle.classList.add('active');
+// Check for saved preference or default to light mode
+const currentMode = localStorage.getItem('theme') || 'light';
+if (currentMode === 'dark') {
+  body.classList.add('dark-mode');
+  icon.classList.replace('bx-sun', 'bx-moon');
+  darkToggle.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
 }
 
-// Toggle dark mode on click
-toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    
-    if (body.classList.contains('light-mode')) {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark-mode');
-    } else {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        localStorage.setItem('theme', 'light-mode');
-    }
+// Toggle dark mode
+darkToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  
+  if (body.classList.contains('dark-mode')) {
+    icon.classList.replace('bx-sun', 'bx-moon');
+    darkToggle.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    icon.classList.replace('bx-moon', 'bx-sun');
+    darkToggle.innerHTML = '<i class="bx bx-sun"></i> Light Mode';
+    localStorage.setItem('theme', 'light');
+  }
 });

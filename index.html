@@ -6,8 +6,12 @@
     <meta name="description" content="Gerald Jhon Necesario - Front End Developer and UI/UX Designer from Mandaue City, Cebu. Explore my portfolio, projects, and professional experience."/>
     <meta name="keywords" content="Front End Developer, UI/UX Designer, Web Developer, Portfolio, Gerald Necesario, Cebu"/>
     <meta name="author" content="Gerald Jhon G. Necesario" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/body.css"/>
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="icon" type="image/png" href="/assets/Img/Profile.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     
     <title>Gerald Jhon G. Necesario - Portfolio</title>
      
      <script type="application/ld+json">
@@ -26,31 +30,33 @@
   </head>
 
   <body>
-
+    <div class="container">
      <div class="time-clock">
       <p>
         <time id="currentTime">Loading...</time>
       </p>
-    </div>  
+     </div>
     <header>
-
-
+      <button id="darkToggle" class="btn">
+      <i class="bx bx-sun"></i> Light Mode
+      </button>
       <blockquote class="quotes">
         <p>
           "Programming isn't about what you know; it's about what you can figure
           out."
         </p>
-        <cite>-Chris Pine, Learn to Program</cite>
+        <cite lang="en">-Chris Pine, Learn to Program</cite>
       </blockquote>
 
       <div class="profile-image">
-        <img src="/assets/Img/profile copy.jpg" alt="Profile of Gerald Jhon G. Necesario"/>
+        <img src="/assets/Img/Profile.png" width="300" height="300" title="Profile" alt="Profile of Gerald Jhon G. Necesario"/>
       </div>
 
-      
       <section class="profile" aria-label="profile-heading">
-        <h1>Necesario, Gerald Jhon G.</h1>
-          <p> <img src="/assets/Icons/location.svg" alt="Location Icon">Mandaue City, Cebu</p>
+          <h1>Necesario, Gerald Jhon G.
+          <img class="meta-check" src="/assets/Icons/check.png" alt="Verified">
+          </h1>
+            <p><img src="/assets/Icons/location.svg" alt="Location Icon">Mandaue City, Cebu</p>
         <div class="profile-info">
           <h2>
             <span style="--i:0">Front End Developer</span>
@@ -63,15 +69,16 @@
         </div>
 
         <div class="btn-profile">
-          <a href="/assets/CV/My-Resume.pdf" class="CV-download" target="_blank" rel="noopener noreferrer">Download CV</a>
+          <a  href="/assets/CV/My-Resume.pdf" class="CV-download" target="_blank" rel="noopener noreferrer">Download CV</a>
           <a href="mailto:gerald.necesario6@gmail.com" class="email-btn">Email me here</a>
-
-         
         </div>
       </section>
+     
     </header>
 
     <main>
+
+       
       <section class="about-me" aria-labelledby="about-heading">
         <h2 id="about-heading">About Me</h2>
         <p>
@@ -118,12 +125,12 @@
       <section class="list" aria-labelledby="list-heading-content">
         <h2 id="list-heading-content" class="visually-hidden">Additional Information</h2>
           <div class="goals">
-          <p>Goals</p>
+          <h4>Goals</h4>
           <p>Find a career that you love.</p>
           </div>
 
           <div class="organization">
-            <p>A Member of:</p>
+            <h4>A Member of:</h4>
             <div class="organization-container">
               <ul>
                 <li>CITE Photography</li>
@@ -134,23 +141,24 @@
 
           </div>
           <div class="social-container">
-            <h2>Social Links</h2>
+            <h4>Social Links</h4>
             <div class="social-links">
-              <a href="https://www.facebook.com/Gerald.necesario6" title="Visit Facebook profile" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-facebook'></i>Gerald Jhon.
+              <a href="https://www.linkedin.com/in/gerald-jhon-necesario-820b73346/" title="Visit linkedIn profile" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-linkedin' aria-hidden="true"></i>Gerald Jhon Necesario
               </a>
               <a href="https://www.instagram.com/gerald_jhon01/" title="Visit instagram profile" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-instagram'></i>Gerald_jhon01
+                <i class='bx bxl-instagram' aria-hidden="true"></i>Gerald_jhon01
               </a>
               <a href="https://github.com/GeraldJhon" title="Visit Github profile" target="_blank"  rel="noopener noreferrer">
-                <i class='bx bxl-github'></i>GeraldJhon
+                <i class='bx bxl-github' aria-hidden="true"></i>GeraldJhon
               </a>
             </div>
           </div>
         
         <div class="contact">
-          <a href="mailto:gerald.necesario6@gmail.com" title="Visit Email " target="_blank"><i class='bx bxl-gmail'></i> gerald.necesario6@gmail.com</a>
-          <a href="tel:+639812550910">+639 812 550 910</a>
+          <h4>Contact Me:</h4>
+          <a href="mailto:gerald.necesario6@gmail.com" title="Visit Email" aria-label="Send email to gerald.necesario6@gmail.com"><i class='bx bxl-gmail'></i> gerald.necesario6@gmail.com</a>
+          <a href="tel:+639812550910" aria-label="Phone number: +63 9 812 550 910"> <i class='bx bx-phone'></i>+639 812 550 910</a>
 
 
         </div>
@@ -160,11 +168,11 @@
         <h2 id="image-heading">Gallery</h2>
         <div class="training-picture-container">
           <ul class="picture-list">
-            <li><a href="#" class="gallery-item" data-index="0"><img src="/assets/alliance training/picture 1.jpg" alt="First meet training conduct" loading="lazy"></a></li>
-            <li><a href="#" class="gallery-item" data-index="1"><img src="/assets/alliance training/picture 2.jpg" alt="Certification Award" loading="lazy"></a></li>
-            <li><a href="#" class="gallery-item" data-index="2"><img src="/assets/alliance training/picture 3.jpg" alt="Defend our Ticketing System" loading="lazy"></a></li>
-            <li><a href="#" class="gallery-item" data-index="3"><img src="/assets/alliance training/picture 4.jpg" alt="Picture with all student & Alliance" loading="lazy"></a></li>
-            <li><a href="#" class="gallery-item" data-index="4"><img src="/assets/alliance training/picture 5.jpg" alt="Picture of ours" loading="lazy"></a></li>
+            <li><button class="gallery-item" data-index="0"><img src="/assets/alliance training/picture 1.jpg" alt="First meet training conduct" loading="lazy"></button></li>
+            <li><button class="gallery-item" data-index="1"><img src="/assets/alliance training/picture 2.jpg" alt="Certification Award" loading="lazy"></button></li>
+            <li><button class="gallery-item" data-index="2"><img src="/assets/alliance training/picture 3.jpg" alt="Defend our Ticketing System" loading="lazy"></button></li>
+            <li><button class="gallery-item" data-index="3"><img src="/assets/alliance training/picture 4.jpg" alt="Picture with all student & Alliance" loading="lazy"></button></li>
+            <li><button class="gallery-item" data-index="4"><img src="/assets/alliance training/picture 5.jpg" alt="Picture of ours" loading="lazy"></button></li>
           </ul>
         </div>
 
@@ -173,7 +181,7 @@
             <div class="lightbox-content">
               <button class="close-btn" id="closeBtn">&times;</button>
               <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
-              <img src="" alt="" id="lightboxImg">
+              <img src="#" alt="Gallery image" id="lightboxImg">
               <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
               <div class="lightbox-controls">
                 <span class="lightbox-counter" id="counter">1 / 5</span>
@@ -188,8 +196,8 @@
     <footer>
       <p>&#169; 2026 Gerald Jhon. All rights reserved.</p>
     </footer>
-    
-    <script src="/darkmode-function.js"></script>
+  </div>
+    <script src="/scripts/darkmode-function.js"></script>
     <script src="/scripts/script.js"></script>
     <script src="/scripts/gallery.js"></script>
   </body>
