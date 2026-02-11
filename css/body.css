@@ -89,6 +89,25 @@ main section:hover {
   color: var(--txt-primary);
 }
 
+.front-end-stack,
+.back-end-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.front-end-stack span,
+.back-end-stack span {  
+  color: var(--txt-primary);
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color var(--transition-speed);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

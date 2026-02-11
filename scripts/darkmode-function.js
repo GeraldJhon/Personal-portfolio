@@ -1,27 +1,75 @@
-// Dark Mode Toggle
-const darkToggle = document.getElementById('darkToggle');
-const body = document.body;
-const icon = darkToggle.querySelector('i');
+// Dark Mode Manager - Maintainable Implementation
+class DarkModeManager {
+  constructor() {
+    this.toggle = document.getElementById('darkToggle');
+    this.body = document.body;
+    this.storageKey = 'theme';
+    this.themes = {
+      DARK: 'dark',
+      LIGHT: 'light'
+    };
+    
+    this.init();
+  }
 
-// Check for saved preference or default to light mode
-const currentMode = localStorage.getItem('theme') || 'light';
-if (currentMode === 'dark') {
-  body.classList.add('dark-mode');
-  icon.classList.replace('bx-sun', 'bx-moon');
-  darkToggle.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
+  // Initialize dark mode
+  init() {
+    const savedTheme = this.getSavedTheme();
+    this.applyTheme(savedTheme);
+    this.attachEventListeners();
+  }
+
+  // Get saved theme from localStorage
+  getSavedTheme() {
+    return localStorage.getItem(this.storageKey) || this.themes.LIGHT;
+  }
+
+  // Save theme to localStorage
+  saveTheme(theme) {
+    localStorage.setItem(this.storageKey, theme);
+  }
+
+  // Apply theme to the page
+  applyTheme(theme) {
+    const isDark = theme === this.themes.DARK;
+    
+    // Update body class
+    this.body.classList.toggle('dark-mode', isDark);
+    
+    // Update toggle button
+    this.updateToggleButton(isDark);
+  }
+
+  // Update toggle button appearance
+  updateToggleButton(isDark) {
+    if (!this.toggle) return;
+    
+    const icon = isDark ? 'bx-moon' : 'bx-sun';
+    const text = isDark ? 'Dark Mode' : 'Light Mode';
+    
+    this.toggle.innerHTML = `<i class='bx ${icon}'></i> ${text}`;
+  }
+
+  // Toggle between themes
+  toggleTheme() {
+    const currentTheme = this.getSavedTheme();
+    const newTheme = currentTheme === this.themes.DARK 
+      ? this.themes.LIGHT 
+      : this.themes.DARK;
+    
+    this.applyTheme(newTheme);
+    this.saveTheme(newTheme);
+  }
+
+  // Attach event listeners
+  attachEventListeners() {
+    if (this.toggle) {
+      this.toggle.addEventListener('click', () => this.toggleTheme());
+    }
+  }
 }
 
-// Toggle dark mode
-darkToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  
-  if (body.classList.contains('dark-mode')) {
-    icon.classList.replace('bx-sun', 'bx-moon');
-    darkToggle.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
-    localStorage.setItem('theme', 'dark');
-  } else {
-    icon.classList.replace('bx-moon', 'bx-sun');
-    darkToggle.innerHTML = '<i class="bx bx-sun"></i> Light Mode';
-    localStorage.setItem('theme', 'light');
-  }
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  new DarkModeManager();
 });

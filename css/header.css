@@ -210,3 +210,60 @@ body.dark-mode .profile-image:hover img {
   align-items: center;
   gap: 5px;
 }
+
+/* ============================================
+   ICON SYSTEM - Dark Mode Compatible
+   ============================================ */
+
+/* Enter Icons (PNG) */
+.project-header img,
+.certfication-header img,
+.tech-stack-header img,
+.other-skill-header img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Dark mode - invert to white */
+body.dark-mode .project-header img,
+body.dark-mode .certfication-header img,
+body.dark-mode .tech-stack-header img,
+body.dark-mode .other-skill-header img {
+  filter: invert(1);
+}
+
+/* Hover effect */
+.project-header a:hover img,
+.certfication-header a:hover img,
+.tech-stack-header a:hover img,
+.other-skill-header a:hover img {
+   transform: translateY(-5px);
+}
+
+/* Location Icons (SVG) */
+.profile p img,
+.location img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  transition: filter var(--transition-speed);
+}
+
+body.dark-mode .profile p img,
+body.dark-mode .location img {
+  filter: invert(1);
+}
+
+/* Verified Badge - keep original */
+.meta-check {
+  filter: none !important;
+}
+
+/* Boxicons - use CSS variable */
+.social-links i,
+.contact-links i,
+#darkToggle i {
+  color: var(--txt-primary);
+  transition: color var(--transition-speed);
+}
