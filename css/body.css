@@ -36,7 +36,7 @@ main {
   grid-area: tech-stack;
 }
 
-.other-skill{
+.skill{
   grid-area: other-skill;
 }
 
@@ -82,7 +82,7 @@ main section:hover {
 .certfication-header,
 .project-header,
 .tech-stack-header,
-.other-skill-header{
+.skill-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,6 +107,9 @@ main section:hover {
   font-weight: 500;
   transition: background-color var(--transition-speed);
 }
+
+
+
 
 .visually-hidden {
   position: absolute;
@@ -167,6 +170,9 @@ main section:hover {
   padding: 7px;
  
 }
+.social-container > h4 {
+  margin-bottom: 0.5rem;
+}
 .social-links {
   display: flex;
   flex-direction: column;
@@ -191,9 +197,14 @@ main section:hover {
 .social-links > a:hover{
   box-shadow: var(--box-shadow-hover);
 }
+.social-links > a i {
+  font-size: 14px;
+}
+
 .social-links i {
   margin-right: 5px;
 }
+
 .contact-links{
   display: flex;
   flex-direction: column;
@@ -202,6 +213,10 @@ main section:hover {
 
 .contact {
   padding: 7px;
+}
+
+.contact > h4 {
+  margin-bottom: 0.5rem;
 }
 
 .contact-links > a {
@@ -231,6 +246,7 @@ main section:hover {
 .training-picture {
   min-height: 185px;
   margin-bottom: 35px;
+  overflow: hidden;
 }
 
 .training-picture-container{

@@ -197,6 +197,7 @@ body.dark-mode .profile-image:hover img {
   padding: 5px 20px;
   font-weight: 600;
   transition: all var(--transition-speed);
+  max-width: 150px;
 }
 
 .btn-profile a:hover {
